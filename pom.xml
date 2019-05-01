@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.viaflow.vfood</groupId>
-	<artifactId>VFood</artifactId>
+	<artifactId>VFood-Redis</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>VFood</name>
