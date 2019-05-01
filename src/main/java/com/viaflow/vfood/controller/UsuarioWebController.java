@@ -12,7 +12,7 @@ import com.viaflow.vfood.validation.BaseValidation;
 @RestController
 @RequestMapping("/api/usuario")
 @CrossOrigin(origins = "*")
-public class UserWebController extends BaseController<Usuario, UsuarioService, BaseValidation<Usuario>> {
+public class UsuarioWebController extends BaseController<Usuario, UsuarioService, BaseValidation<Usuario>> {
 	
 	@Autowired
 	private UsuarioService usuarioService;

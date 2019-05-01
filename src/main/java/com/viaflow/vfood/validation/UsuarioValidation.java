@@ -1,10 +1,12 @@
 package com.viaflow.vfood.validation;
 
+import org.springframework.stereotype.Component;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 
 import com.viaflow.vfood.model.Usuario;
 
+@Component
 public class UsuarioValidation implements BaseValidation<Usuario>{
 	
 	@Override
