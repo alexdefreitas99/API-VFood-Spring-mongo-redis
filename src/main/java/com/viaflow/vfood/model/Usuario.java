@@ -15,7 +15,7 @@ import lombok.EqualsAndHashCode;
 public class Usuario extends DTOBase {
 	
 	@Id
-	private int id;
+	private String id;
 	
 	@NotEmpty
 	private String nome;

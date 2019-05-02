@@ -18,7 +18,7 @@ import lombok.EqualsAndHashCode;
 public class Compra extends DTOBase{
 
 	@Id
-	private int id;
+	private String id;
 	
 	@NotEmpty
 	@DBRef

@@ -14,7 +14,7 @@ import lombok.EqualsAndHashCode;
 public class Perfil extends DTOBase {
 	
 	@Id
-	private int id;
+	private String id;
 	
 	@NotEmpty
 	private String nome;

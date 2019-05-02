@@ -2,6 +2,9 @@ package com.viaflow.vfood.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -47,6 +50,7 @@ protected abstract S getService();
 		return ResponseEntity.ok(response);
 	}
 	
+	@CachePut(value = "post-single", key = "#response.id")
 	@PutMapping
 	public ResponseEntity<Response<T>> update(HttpServletRequest req, @RequestBody T obj, 
 			BindingResult result) { 
@@ -73,6 +77,7 @@ protected abstract S getService();
 		return ResponseEntity.ok(response);
 	}
 	
+	@Cacheable(value = "post-single", key = "#id", unless = "#response.shares < 500")
 	@GetMapping(value="{id}")
 	public ResponseEntity<Response<T>> findById(@PathVariable("id") String id) { 
 		Response<T> response = new Response<>();
@@ -86,6 +91,7 @@ protected abstract S getService();
 		return ResponseEntity.ok(response);
 	}
 	
+	@Cacheable(value = "post-single")
 	@GetMapping(value="{page}/{count}/{field}/{order}")
 	public ResponseEntity<Response<Page<T>>> findAll(@PathVariable("page") int page,
 			@PathVariable("count") int count,
@@ -101,6 +107,7 @@ protected abstract S getService();
 		return ResponseEntity.ok(response);
 	}
 	
+	@CacheEvict(value = "post-single", key = "#id")
 	@DeleteMapping(value="{id}")
 	public ResponseEntity<Response<String>> delete(@PathVariable("id") String id) { 
 		Response<String> response = new Response<>();
