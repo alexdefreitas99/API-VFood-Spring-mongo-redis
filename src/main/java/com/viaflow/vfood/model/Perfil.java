@@ -1,5 +1,7 @@
 package com.viaflow.vfood.model;
 
+import java.io.Serializable;
+
 import javax.validation.constraints.NotEmpty;
 
 import org.springframework.data.annotation.Id;
@@ -11,8 +13,10 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper=false)
 @Document
-public class Perfil extends DTOBase {
+public class Perfil extends DTOBase implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	private String id;
 	

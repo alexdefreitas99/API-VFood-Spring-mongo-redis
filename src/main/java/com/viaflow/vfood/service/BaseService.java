@@ -11,5 +11,7 @@ public interface BaseService<T> {
 	
 	void delete(String id);
 	
+	String deleteAllCache();
+	
 	Page<T> findAll(int page, int count, String field, String order);
 }

@@ -7,7 +7,10 @@ import com.viaflow.vfood.model.Perfil;
 import com.viaflow.vfood.repository.PerfilRepository;
 import com.viaflow.vfood.service.PerfilService;
 
+import lombok.RequiredArgsConstructor;
+
 @Service
+@RequiredArgsConstructor
 public class PerfilServiceImpl extends BaseServiceImpl<Perfil, PerfilRepository> implements PerfilService{
 
 	@Autowired
@@ -16,5 +19,5 @@ public class PerfilServiceImpl extends BaseServiceImpl<Perfil, PerfilRepository>
 	@Override
 	protected PerfilRepository getRepo() {
 		return this.repo;
-	}	
+	}
 }
