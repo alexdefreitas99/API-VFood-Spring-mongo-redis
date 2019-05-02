@@ -2,13 +2,10 @@ HELP.md
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 .metadata/
-.application.properties
 
 ### STS ###
 .apt_generated
-.classpath
 .factorypath
-.project
 .settings
 .springBeans
 .sts4-cache
@@ -26,6 +23,3 @@ HELP.md
 /nbdist/
 /.nb-gradle/
 /build/
-
-### VS Code ###
-.vscode/
