@@ -11,7 +11,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper=true)
 @Document
 public class Perfil extends DTOBase implements Serializable {
 	
@@ -21,5 +21,6 @@ public class Perfil extends DTOBase implements Serializable {
 	private String id;
 	
 	@NotEmpty
-	private String nome;
+	private String nome;	
+	
 }
