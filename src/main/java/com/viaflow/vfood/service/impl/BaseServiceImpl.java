@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.viaflow.vfood.service.BaseService;
 
 public abstract class BaseServiceImpl<T, S extends MongoRepository<T, String>> implements BaseService<T> {
-
+// 
 	protected abstract S getRepo();
 
 	@Override
